@@ -10,7 +10,7 @@ func main() {
 
 	fmt.Println("Der Server wird erstellt...")
 
-	http.Handle("/", http.FileServer(http.Dir("static")))
+	http.Handle("/", http.FileServer(http.Dir("data")))
 
 	http.ListenAndServe(":8080", nil)
 
