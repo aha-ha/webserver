@@ -5,16 +5,10 @@ import (
 	"net/http"
 )
 
-func about(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Erstellt mit Aha-Ha Webservercreator <a href='https://aha-ha.github.io' target='_blank'>Website</a>")
-}
-
 func main() {
 	fmt.Println("Hallo!")
 
 	fmt.Println("Der Server wird erstellt...")
-
-	http.HandleFunc("/about", about)
 
 	http.Handle("/", http.FileServer(http.Dir("static")))
 
